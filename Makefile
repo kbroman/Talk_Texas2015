@@ -20,8 +20,6 @@ weball: index.html JS Figs
 	scp CSS/* broman-2.biostat.wisc.edu:public_html/presentations/AAAS/CSS/
 	scp Figs/*.png broman-2.biostat.wisc.edu:public_html/presentations/AAAS/Figs/
 	scp Figs/*.jpg broman-2.biostat.wisc.edu:public_html/presentations/AAAS/Figs/
-	scp Figs/Panels/* broman-2.biostat.wisc.edu:public_html/presentations/AAAS/Figs/Panels/
-	scp Figs/Charts/* broman-2.biostat.wisc.edu:public_html/presentations/AAAS/Figs/Charts/
 
 tar: index.html JS Figs
 	cd ..;tar czvhf broman_aaas.tgz AAAS/[A-Za-z]*
