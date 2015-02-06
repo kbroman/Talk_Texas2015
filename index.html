@@ -40,10 +40,10 @@ for high-dimensional genetic data</h2>
 <p class="nopadding"><font class="gray">slides</a>: <code><a href="http://www.biostat.wisc.edu/~kbroman/presentations/AAAS">bit.ly/AAAS2015</a></code></p>
 
 <aside>
-These are slides for a talk for the 2015 AAAS meeting in San Jose,
+These are slides for a talk for the <a href="https://aaas.confex.com/aaas/2015/webprogram/start.html">2015 AAAS meeting</a> in San Jose,
 California, 13 Feb 2015.<br><br>
 
-Click on the link at the bottom-left to remove these
+Click on the link at the top-right to remove these
 notes.<br><br>
 
 These slides were tested for Chrome on a Mac and might look terrible
@@ -655,8 +655,6 @@ interactions that glue them together.
 <h3>Issues</h3>
 
 <ul class="tight">
-  <li>How can you write unit tests for graphing functions?</li>
-
   <li>Scaling up to larger data sets</li>
     <ul class="lowlight">
       <li>How best to store data on the back end?</li>
@@ -664,21 +662,23 @@ interactions that glue them together.
       <li>Handling > 10k features (or event handlers)</li>
     </ul>
 
+  <li>How to test for graphing software?</li>
+
   <li>Have my desires overreached my abilities?</li>
 
 </ul>
 
 <aside>
-I&rsquo;ve recently (finally!) come to appreciate the importance of
-writing unit tests. But how can I write such for these interactive
-graphs?  I have automated tests that pop up a series of charts in a
-browser. But then I need to go through them, one at a time, and check
-if they&rsquo;re still working as they should.<br><br>
-
 I think I have a working system for small-scale plots with datasets of
 moderate size. But I have a lot more to learn before I can make the
 kinds of large-scale tools that motivated me to work on this
 stuff.<br><br>
+
+I&rsquo;ve recently (finally!) come to appreciate the importance of
+writing unit tests for software. But how can I write such for these interactive
+graphs?  I have automated tests that pop up a series of charts in a
+browser. But then I need to go through them, one at a time, and check
+if they&rsquo;re still working as they should.<br><br>
 
 Finally, I love this stuff, but I fear that I&rsquo;m lacking the
 necessary design sense.
