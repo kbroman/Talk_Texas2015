@@ -66,7 +66,7 @@ lod_permutation = () ->
               .attr("y", 0)
               .attr("width", buttonw)
               .attr("height", buttonh)
-              .attr("fill", d3.rgb(102, 254, 102))
+              .attr("fill", d3.rgb(152, 254, 152))
               .attr("stroke", bgcolor)
               .attr("stroke-width", 1)
     permbuttong.append("text")
@@ -86,7 +86,7 @@ lod_permutation = () ->
               .attr("y", 0)
               .attr("width", buttonw2)
               .attr("height", buttonh)
-              .attr("fill", d3.rgb(254, 102, 254))
+              .attr("fill", d3.rgb(254, 152, 254))
               .attr("stroke", bgcolor)
               .attr("stroke-width", 1)
               .attr("opacity", 0)
@@ -110,6 +110,7 @@ lod_permutation = () ->
       permbutton.on "click", ->
         col++
         col = 1 if col >= data.phevals.length
+        backbutton.transition().duration(250).attr("opacity", 1) if col > 0
 
         lodpanel.remove()
         effpanel.remove()
@@ -133,12 +134,6 @@ lod_permutation = () ->
           d3.select(this).transition().duration(250).attr("opacity", 0)
 
         drawRandom(data, col)
-
-
-      backbutton.on("mouseover", ->
-                         if col != 0 # if not at beginning
-                          d3.select(this).transition().duration(250).attr("opacity", 1))
-                .on("mouseout", -> d3.select(this).transition().duration(1000).attr("opacity", 0))
 
     # function that does all of the work
     drawRandom = (data, column) ->
