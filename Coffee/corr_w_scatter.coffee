@@ -98,9 +98,9 @@ d3.json "Data/corr_w_scatter.json", (data) ->
   if nGroup == 1
     colors = [ d3.rgb(150, 150, 150) ]
   else if nGroup == 2
-    scatcolors = ["MediumVioletRed", "slateblue"]
+    colors = ["MediumVioletRed", "slateblue"]
   else if nGroup == 3
-    scatcolors = ["MediumVioletRed", "MediumSeaGreen", "slateblue"]
+    colors = ["MediumVioletRed", "MediumSeaGreen", "slateblue"]
   else
     if nGroup <= 10
       colorScale = d3.scale.category10()
