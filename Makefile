@@ -11,15 +11,15 @@ JS/%.js: Coffee/%.coffee
 	coffee -bco JS $^
 
 web: index.html
-	scp *.html broman-2.biostat.wisc.edu:public_html/presentations/AAAS/
+	scp *.html broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/
 
 weball: index.html JS Figs
-	scp *.html broman-2.biostat.wisc.edu:public_html/presentations/AAAS/
-	scp JS/* broman-2.biostat.wisc.edu:public_html/presentations/AAAS/JS/
-	scp Coffee/* broman-2.biostat.wisc.edu:public_html/presentations/AAAS/Coffee/
-	scp CSS/* broman-2.biostat.wisc.edu:public_html/presentations/AAAS/CSS/
-	scp Figs/*.png broman-2.biostat.wisc.edu:public_html/presentations/AAAS/Figs/
-	scp Figs/*.jpg broman-2.biostat.wisc.edu:public_html/presentations/AAAS/Figs/
+	scp *.html broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/
+	scp JS/* broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/JS/
+	scp Coffee/* broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/Coffee/
+	scp CSS/* broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/CSS/
+	scp Figs/*.png broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/Figs/
+	scp Figs/*.jpg broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/Figs/
 
 tar: index.html JS Figs
-	cd ..;tar czvhf broman_aaas.tgz AAAS/[A-Za-z]*
+	cd ..;tar czvhf broman_htp.tgz HTP2015/[A-Za-z]*
