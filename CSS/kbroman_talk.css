@@ -342,6 +342,11 @@ img.indent {
     margin-left: 100px;
 }
 
+img.center {
+    margin: 0px auto;
+    display: block;
+}
+
 p.remove_stickies{
     position: absolute;
     top: 3px;
