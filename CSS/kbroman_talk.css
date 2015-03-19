@@ -350,3 +350,8 @@ p.remove_stickies{
     font-size: 18px;
     cursor:pointer;
 }
+
+h3.smaller {
+    font-size:  48px;
+    margin-top: 67.16px;
+}
