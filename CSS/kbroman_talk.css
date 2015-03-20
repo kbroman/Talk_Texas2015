@@ -363,23 +363,9 @@ h3.smaller {
 
 <!-- center text horiz & vert on slide -->
 div.center {
-    height: 800px;
     position: relative;
 }
-div.center h3 {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
-<!-- center text horiz & vert on slide when there is a title -->
-div.center2 {
-    height: 400px;
-    position: relative;
-}
-div.center2 h4 {
+div.center h3,h4 {
     margin: 0;
     position: absolute;
     top: 50%;
