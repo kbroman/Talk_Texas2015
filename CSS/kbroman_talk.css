@@ -239,6 +239,10 @@ p.codelink {
   margin-left: 40px;
   font-size: 18px;
 }
+<!-- hyper links within codelink in gray -->
+p.codelink a {
+  color: #C8C8C8;
+}
 
 p.reference {
   color: rgb(200,200,200);
@@ -365,15 +369,11 @@ h3.smaller {
 div.center {
     position: relative;
 }
-div.center h3,h4 {
+div.center h3,div.center h4 {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-}
-
-p.codelink a {
-  color: #C8C8C8;
 }
