@@ -63,7 +63,6 @@ in some browsers.
 
 
 <section>
-
 <h3>Inbred mice</h3>
 
 <img style="position:fixed;bottom: 0px; left:0px; z-index: -1;" width="1280px" src="Figs/inbredmice.jpg" />
@@ -86,7 +85,6 @@ Threadgill</a>.
 
 
 <section>
-
 <h3>Human vs mouse</h3>
 
 <img style="position:fixed;top: 300px; left:120px; z-index: -1;" height="500px" src="Figs/da-vinci-man.jpg" />
@@ -108,7 +106,6 @@ href="http://www.daviddeen.com">David Deen</a>.
 
 
 <section>
-
 <h3>Genome scan for QTL</h3>
 
 <img src="Figs/lodcurve_insulin.png" />
@@ -133,7 +130,6 @@ hard to beat.
 
 
 <section>
-
 <h3>Genome scan for QTL</h3>
 
 <img src="Figs/lodcurve_insulin_with_effects.png" />
@@ -154,7 +150,6 @@ data concern a cross between two strains labeled B and R.
 
 
 <section>
-
 <h3>Genome-scale phenotypes</h3>
 
 <img height=700 class="indent" src="Figs/mouse_on_chips.png" />
@@ -230,7 +225,6 @@ final yield.)
 
 
 <section>
-
 <div class="center"><h3>More is not necessarily better</h3></div>
 
 <aside>
@@ -251,7 +245,6 @@ influenced by fewer QTL, and with stronger QTL effects.)
 
 
 <section>
-
 <h3>Challenges: <span class="lowlight">diagnostics</span></h3>
 
 <img height=600 class="center" src="Figs/weird_correlation_matrix.png"/>
@@ -266,7 +259,6 @@ This is a correlation matrix for a set of arrays. What the heck is that?
 
 
 <section>
-
 <h3>Challenges: <span class="lowlight">diagnostics</span></h3>
 
 <img width=900 class="center" src="Figs/many_boxplots.png"/>
@@ -280,14 +272,18 @@ median. The black line is at the median. The pink lines are at the
 25th and 75th percentiles. The green, orange, and blue lines are at 10,
 5, and 1 percentiles.<br><br>
 
-It turned out that there were a batch of 120 badly-behaved arrays.
+It turned out that there were a batch of 120 badly-behaved arrays.<br><br>
+
+Things to be concerned about: sample mix-ups, batch effects, bad
+assays.<br><br>
+
+But it's hard to look at the data, given the scale.
 </aside>
 <p class="pg">9</p></section>
 
 
 
 <section>
-
 <h3>Challenges: <span class="lowlight">metadata</span></h3>
 
 <div class="center"><h4>What the heck is &ldquo;<code class="highlight">FAD_NAD SI 8.3_3.3G</code>&rdquo;?</h4></div>
@@ -301,6 +297,49 @@ the phenotypes, as well.
 </aside>
 <p class="pg">10</p></section>
 
+
+<section>
+<h3>Challenges: <span class="lowlight">Organizing & automating</span></h3>
+
+
+<aside>
+The phenotypes (and samples) typically come in batches. Each batch
+will need a bit of curation (e.g., diagnostics).<br><br>
+
+Our ideas of what analyses to perform generally evolve over the course
+of a project. With a single phenotype, this is pretty easy: you just
+revise your scripts and re-run.<br><br>
+
+With <span class="highlight">many</span> batches of <span
+class="highlight">many</span> phenotypes, you may need to go back and
+re-do things. How to keep track of what was done for which
+phenotypes?<br><br>
+
+I suggest having a table that describes, for each phenotype or batch
+of phenotype, what needs to be done. And the results should include
+some record of how they were obtained. And then you run some
+uber-script that checks to see what needs to be done or re-done
+and ships off the computations and collects the results.
+
+FIXME: an illustration of batches of phenotypes, with rectangles. Maybe
+an animation? Or maybe just three slides.
+</aside>
+<p class="pg">11</p></section>
+
+
+<section>
+<h3>Challenges: <span class="lowlight">Scale of the results</span></h3>
+
+
+<aside>
+You think the data are big; the results are <span
+class="highlight">really</span> big, even if you just do pairwise
+associations (phenotype vs phenotype; phenotype vs genotype).
+
+FIXME: include illustration with rectangles for genotypes and
+phenotypes, and then add a bigger rectangle for the results.
+</aside>
+<p class="pg">12</p></section>
 
 
 
@@ -388,7 +427,6 @@ provides important courses on these topics, for scientists.
 
 
 <section>
-
 <h3>Interactive graphics</h3>
 
 <div id="corr_w_scatter" style="margin-left:-50px;"></div>
@@ -459,7 +497,6 @@ right to get some further information.
 
 
 <section>
-
 <h3 class="smaller">Genome scan for a longitudinal phenotype</h3>
 
 <div id="lod_alltimes_fig" style="font-size:20px;margin-left:-50px;"></div>
@@ -509,7 +546,6 @@ was painfully slow to refresh.)
 
 
 <section>
-
 <h3>Interactivity is great for teaching</h3>
 
 <div id="lod_onetime_random_fig" style="margin-left:-30px;"></div>
@@ -583,7 +619,6 @@ No error is given, but nothing shows up in the plot.
 
 
 <section nopadding>
-
 <h3 style="margin-top:10px;margin-left:-20px;">Interactive eQTL plot</h3>
 
 <div id="cistrans" class="fig" style="margin-top:-80px;"></div>
@@ -847,7 +882,6 @@ Many people are involved in the studies that I presented.
 
 
 <section>
-
 <div class="hugetop">
 <p class="large"><span class="gray">slides</span>: <code><a href="http://www.biostat.wisc.edu/~kbroman/presentations/HTP2015">bit.ly/HTP2015</a></code>
 &nbsp; <img style="vertical-align:middle;" width="150px" src="Figs/cc-zero.png" /></p>
