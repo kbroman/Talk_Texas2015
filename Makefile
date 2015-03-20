@@ -1,6 +1,6 @@
 all: index.html Figs JS
 
-Figs: Figs/intercross.png Figs/lodcurve_insulin.png
+Figs: Figs/intercross.png Figs/lodcurve_insulin.png Figs/many_boxplots.png
 
 JS: JS/manyboxplots.js JS/lod_and_effect.js JS/cistrans.js JS/lod_alltimes.js JS/corr_w_scatter.js JS/selection_example.js JS/lod_onetime_random.js JS/handle_stickies.js
 

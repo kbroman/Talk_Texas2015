@@ -248,6 +248,58 @@ influenced by fewer QTL, and with stronger QTL effects.)
 <p class="pg">7</p></section>
 
 
+
+
+<section>
+
+<h3>Challenges: <span class="lowlight">diagnostics</span></h3>
+
+<img height=600 class="center" src="Figs/weird_correlation_matrix.png"/>
+
+<aside>
+This is a correlation matrix for a set of arrays. What the heck is that?
+</aside>
+<p class="pg">7</p></section>
+
+
+<section>
+
+<h3>Challenges: <span class="lowlight">diagnostics</span></h3>
+
+<img width=900 class="center" src="Figs/many_boxplots.png"/>
+
+<aside>
+This is like a set of 487 boxplots of the array data, sorted by their
+median. The black line is at the median. The pink lines are at the
+25th and 75th percentiles. The green, orange, and blue lines are at 10,
+5, and 1 percentiles.<br><br>
+
+It turned out that there were a batch of 120 badly-behaved arrays.
+</aside>
+<p class="pg">7</p></section>
+
+
+
+<section>
+
+<h3>Challenges: <span class="lowlight">metadata</span></h3>
+
+<div class="center2"><h4>What the heck is &ldquo;<code class="highlight">FAD_NAD SI 8.3_3.3G</code>&rdquo;?</h4></div>
+
+<aside>
+An actual phenotype name.<br><br>
+
+We need to create data dictionaries with short and long versions of
+names and then proper descriptions. It can be helpful to categorize
+the phenotypes, as well.
+</aside>
+<p class="pg">7</p></section>
+
+
+
+
+
+
 <section>
 <h3>The ridiculome</h3>
 
@@ -710,7 +762,7 @@ It&rsquo;s always good to have a summary slide with your key points.
   class="highlight">tailored</font> to the data and
   questions</li>
 
-  <li><a href="http://kbroman.org/qtlcharts" class="hilight">R/qtlcharts</a>,
+  <li><a href="http://kbroman.org/qtlcharts" class="highlight">R/qtlcharts</a>,
   an R package for interactive graphs for QTL data</li>
     <ul class="lowlight">
         <li><a href="http://www.ncbi.nlm.nih.gov/pubmed/25527287">Broman (2015) Genetics 199:359&ndash;361</a></li>
