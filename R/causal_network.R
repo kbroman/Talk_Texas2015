@@ -1,7 +1,7 @@
 library(broman)
 iArrows <- igraph:::igraph.Arrows
 
-png("../Figs/causal_network.png", height=600, width=1000, pointsize=48)
+svg("../Figs/causal_network.svg", height=6, width=10, pointsize=36)
 par(bg="#181818", fg="white", bty="n", mar=rep(0, 4))
 plot(0,0, xaxt="n", yaxt="n", xlab="", ylab="", type="n",
      xlim=c(-16-2/3, 150), ylim=c(0, 100), xaxs="i", yaxs="i")
