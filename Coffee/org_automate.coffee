@@ -7,7 +7,12 @@ draw_orgchart = () ->
     bgcolor = "#181818"
     xs = d3.scale.linear().range([0, w]).domain([0, 100])
     ys = d3.scale.linear().range([0, h]).domain([0, 100])
-    animation_duration = 1000
+    animation_duration = 750
+
+    x = [0, 40, 71, 82]
+    y = [0,  0, 0, 0]
+    width =  [35, 30, 10, 18]
+    height = [19, 19, 19, 19]
 
     div = d3.select("div#orgchart")
 
@@ -16,105 +21,68 @@ draw_orgchart = () ->
              .attr("width", w)
              .attr("id", "orgchart")
 
-
-    svg.append("rect")
-       .attr("x", xs(0))
-       .attr("y", ys(0))
-       .attr("width", xs(25))
-       .attr("height", ys(33))
+    svg.selectAll("empty")
+       .data([0,1])
+       .enter()
+       .append("rect")
+       .attr("x", (i) -> xs(x[i]))
+       .attr("y", (i) -> ys(y[i]))
+       .attr("width", (i) -> xs(width[i]))
+       .attr("height", (i) -> ys(height[i]))
        .attr("stroke", bgcolor)
        .attr("stroke-width", 1)
-       .attr("fill", colors[0])
-       .on("click", () -> add_more_genotypes())
-    svg.append("text")
-       .attr("x", xs(12.5))
-       .attr("y", ys(5))
-       .text("genotypes")
+       .attr("fill", (i) -> colors[i])
+       .on("click", (i) ->
+           return add_more_genotypes() if i==0
+           add_more_phenotypes() )
+    svg.selectAll("empty")
+       .data(["genotypes", "phenotypes"])
+       .enter()
+       .append("text")
+       .attr("x", (d,i) -> xs(x[i] + 2.5))
+       .attr("y", (d,i) -> ys(y[i] + 5))
+       .text((d) -> d)
        .attr("fill", bgcolor)
        .attr("dominant-baseline", "middle")
-       .attr("text-anchor", "middle")
-       .style("font-size", "30pt")
-
-    svg.append("rect")
-       .attr("x", xs(29))
-       .attr("y", ys(0))
-       .attr("width", xs(30))
-       .attr("height", ys(33))
-       .attr("stroke", bgcolor)
-       .attr("stroke-width", 1)
-       .attr("fill", colors[1])
-       .on("click", () -> add_more_phenotypes())
-    svg.append("text")
-       .attr("x", xs(29+15))
-       .attr("y", ys(5))
-       .text("phenotypes")
-       .attr("fill", bgcolor)
-       .attr("dominant-baseline", "middle")
-       .attr("text-anchor", "middle")
+       .attr("text-anchor", "start")
        .style("font-size", "30pt")
 
     add_more_genotypes = () ->
-        x = [34,68]
-        svg.selectAll("empty")
-           .data(x)
-           .enter()
-           .append("rect")
-           .attr("x", xs(0))
-           .attr("y", (d) -> ys(d))
-           .attr("width", xs(25))
-           .attr("height", ys(33))
-           .attr("stroke", bgcolor)
-           .attr("stroke-width", 1)
-           .attr("fill", colors[0])
-           .attr("opacity", 0)
-           .transition()
-           .duration(animation_duration)
-           .delay((d,i) -> i*animation_duration)
-           .attr("opacity", 1)
-
-
-        x = [34,68]
-        svg.selectAll("empty")
-           .data(x)
-           .enter()
-           .append("rect")
-           .attr("x", xs(29))
-           .attr("y", (d) -> ys(d))
-           .attr("width", xs(30))
-           .attr("height", ys(33))
-           .attr("stroke", bgcolor)
-           .attr("stroke-width", 1)
-           .attr("fill", colors[1])
-           .attr("opacity", 0)
-           .transition()
-           .duration(animation_duration)
-           .delay((d,i) -> i*animation_duration)
-           .attr("opacity", 1)
+        for j in [0..1]
+            svg.selectAll("empty")
+               .data([1..4])
+               .enter()
+               .append("rect")
+               .attr("x", xs(x[j]))
+               .attr("y", (d) -> ys(y[j]+(height[j]+1)*d))
+               .attr("width", xs(width[j]))
+               .attr("height", ys(height[j]))
+               .attr("stroke", bgcolor)
+               .attr("stroke-width", 1)
+               .attr("fill", colors[j])
+               .attr("opacity", 0)
+               .transition()
+               .duration(animation_duration)
+               .delay((d) -> (d-1)*animation_duration)
+               .attr("opacity", 1)
 
     add_more_phenotypes = () ->
-
-        x = [60,60,60, 71,71,71]
-        y = [0,34, 68, 0,34,68]
-        wid = [10,10,10, 30,30,30]
-
-        col = [colors[2], colors[2], colors[2], colors[3], colors[3], colors[3]]
-
-        svg.selectAll("empty")
-           .data(x)
-           .enter()
-           .append("rect")
-           .attr("x", (d) -> xs(d))
-           .attr("y", (d,i) -> ys(y[i]))
-           .attr("width", (d,i) -> xs(wid[i]))
-           .attr("height", ys(33))
-           .attr("stroke", bgcolor)
-           .attr("stroke-width", 1)
-           .attr("fill", (d,i) -> col[i])
-           .attr("opacity", 0)
-           .transition()
-           .duration(animation_duration)
-           .delay((d,i) -> i*animation_duration/2)
-           .attr("opacity", 1)
-
+        for j in [2..3]
+            svg.selectAll("empty")
+               .data([0..4])
+               .enter()
+               .append("rect")
+               .attr("x", xs(x[j]))
+               .attr("y", (d) -> ys(y[j]+(height[j]+1)*d))
+               .attr("width", xs(width[j]))
+               .attr("height", ys(height[j]))
+               .attr("stroke", bgcolor)
+               .attr("stroke-width", 1)
+               .attr("fill", colors[j])
+               .attr("opacity", 0)
+               .transition()
+               .duration(animation_duration/2)
+               .delay((d) -> (d+(j-2)*5)*animation_duration/2)
+               .attr("opacity", 1)
 
 draw_orgchart()
