@@ -424,6 +424,23 @@ but one is affected positively by the QTL and one negatively.
 <p class="pg">16</p></section>
 
 
+<section>
+<h3>Multivariate analysis</h3>
+
+<img height=600 class="center" src="Figs/multivariate2.png" />
+
+
+<aside>
+This is another pair of genes; blue, green and red are genotypes at a
+QTL, for mice that are <span class="highlight">not recombinant</span>
+across the region. The yellow points are recombinant mice.<br><br>
+
+That the recombinant mice show different phenotype pattern than the
+non-recombinants indicates that there are two linked QTL.
+</aside>
+<p class="pg">16</p></section>
+
+
 
 
 
@@ -671,6 +688,42 @@ the green button.
 
 
 
+<section nopadding>
+<h3 style="margin-top:10px;margin-left:-20px;">Interactive eQTL plot</h3>
+
+<div id="cistrans" class="fig" style="margin-top:-80px;"></div>
+
+<aside>
+Here&rsquo;s my most fancy plot. But when I showed this to my
+collaborator, his first question was, &ldquo;Where&rsquo;s my favorite
+gene?&rdquo; I needed to add a search box. <em>Moral</em>: These tools
+are not just for playing around; they need to address the scientific
+questions.<br><br>
+
+The top-left image shows inferred eQTL (sites in genome where genotype
+is associated with the expression of some gene).  The y-axis
+corresponds to the genomic location of probes on a gene expression
+array.  The x-axis corresponds to marker positions.  Dots indicate
+that the genotypes at a particular marker are associated with the
+expression of a particular probe.<br><br>
+
+Hover over a point in the top-right to see all eQTL for a given probe.
+Click on a point to see the LOD curves across the genome for that
+probe: the association between that probe&rsquo;s expression and genotype at
+each position in the genome.<br><br>
+
+Click on a marker in the lower LOD curve plot to see the corresponding
+phenotype-vs-genotype plot in the top-right.
+</aside>
+
+<p class="codelink">
+<a href="Coffee/cistrans.coffee">code</a></p>
+
+<script type="text/javascript" src="JS/cistrans.js"></script>
+<p class="pg">16</p></section>
+
+
+
 
 
 <section nopadding>
@@ -705,44 +758,6 @@ No error is given, but nothing shows up in the plot.
 </aside>
 <p class="pg">13</p></section>
 <script type="text/javascript" src="JS/collision.js"></script>
-
-
-
-
-
-<section nopadding>
-<h3 style="margin-top:10px;margin-left:-20px;">Interactive eQTL plot</h3>
-
-<div id="cistrans" class="fig" style="margin-top:-80px;"></div>
-
-<aside>
-Here&rsquo;s my most fancy plot. But when I showed this to my
-collaborator, his first question was, &ldquo;Where&rsquo;s my favorite
-gene?&rdquo; I needed to add a search box. <em>Moral</em>: These tools
-are not just for playing around; they need to address the scientific
-questions.<br><br>
-
-The top-left image shows inferred eQTL (sites in genome where genotype
-is associated with the expression of some gene).  The y-axis
-corresponds to the genomic location of probes on a gene expression
-array.  The x-axis corresponds to marker positions.  Dots indicate
-that the genotypes at a particular marker are associated with the
-expression of a particular probe.<br><br>
-
-Hover over a point in the top-right to see all eQTL for a given probe.
-Click on a point to see the LOD curves across the genome for that
-probe: the association between that probe&rsquo;s expression and genotype at
-each position in the genome.<br><br>
-
-Click on a marker in the lower LOD curve plot to see the corresponding
-phenotype-vs-genotype plot in the top-right.
-</aside>
-
-<p class="codelink">
-<a href="Coffee/cistrans.coffee">code</a></p>
-
-<script type="text/javascript" src="JS/cistrans.js"></script>
-<p class="pg">16</p></section>
 
 
 
@@ -790,47 +805,6 @@ effective.
 </aside>
 <p class="pg">17</p></section>
 
-
-
-<section>
-<h3>R/qtlcharts &nbsp; <a class="lowlight" href="http://kbroman.org/d3panels">kbroman.org/d3panels</a></h3>
-
-<table cellpadding=25 style="margin-top:100px;">
-  <tr><td valign="top"><a href="http://kbroman.org/d3panels/assets/test/dotchart">
-               <img src="Figs/dotchart.png" title="dotchart" width=225/></a></td>
-      <td valign="top"><a href="http://kbroman.org/d3panels/assets/test/cichart">
-               <img src="Figs/cichart.png" title="cichart" width=225/></a></td>
-      <td valign="top"><a href="http://kbroman.org/d3panels/assets/test/scatterplot">
-               <img src="Figs/scatterplot.png" title="scatterplot" width=225/></a></td>
-      <td valign="top"><a href="http://kbroman.org/d3panels/assets/test/heatmap">
-               <img src="Figs/heatmap.png" title="heatmap" width=225/></a></td>
-  </tr>
-  <tr><td valign="top"><a href="http://kbroman.org/d3panels/assets/test/lodheatmap">
-               <img src="Figs/lodheatmap.png" title="lodheatmap" width=225/></a></td>
-      <td valign="top"><a href="http://kbroman.org/d3panels/assets/test/lodchart">
-               <img src="Figs/lodchart.png" title="lodchart" width=225/></a></td>
-      <td valign="top"><a href="http://kbroman.org/d3panels/assets/test/curvechart">
-               <img src="Figs/curvechart.png" title="curvechart" width=225/></a></td>
-      <td valign="top"><a href="http://kbroman.org/d3panels/assets/test/mapchart">
-               <img src="Figs/mapchart.png" title="mapchart" width=225/></a></td>
-  </tr>
-</table>
-
-<aside>
-The core of <a
-href="http://kbroman.org/qtlcharts">R/qtlcharts</a> is a set of
-functions for generating specific panels (like scatterplots, heatmaps,
-and so forth).<br><br>
-
-There are also a set of functions for generating specific multi-panel
-charts that combine several of the basic panels and define the
-interactions that glue them together.<br><br>
-
-I&rsquo;ve separated them out as a separate JavaScript library,
-<a href="http://kbroman.org/d3panels">d3panels</a>.
-
-</aside>
-<p class="pg">18</p></section>
 
 
 

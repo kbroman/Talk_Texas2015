@@ -5,7 +5,8 @@ Figs: Figs/intercross.png \
 	  Figs/many_boxplots.png \
 	  Figs/pleiotropy_network.svg \
 	  Figs/causal_network.svg \
-	  Figs/multivariate.png
+	  Figs/multivariate.png \
+	  Figs/multivariate2.png
 
 JS: JS/manyboxplots.js JS/lod_and_effect.js JS/cistrans.js JS/lod_alltimes.js JS/corr_w_scatter.js JS/selection_example.js JS/lod_onetime_random.js JS/handle_stickies.js JS/org_automate.js JS/scale_of_results.js
 
