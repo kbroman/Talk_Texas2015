@@ -4,6 +4,7 @@
   height: 960px;
   width: 1280px;
   background: #181818;
+  color: #eee;
 }
 
 .titlepage {
@@ -14,7 +15,7 @@ body {
   height: 960px;
   width: 1280px;
   background: #181818;
-  color: #fff;
+  color: #eee;
   font-family: "Helvetica Neue";
 }
 
@@ -26,6 +27,11 @@ a {
 
 a.gray {
   color: #C8C8C8;
+}
+
+
+a.white {
+    color: #eee;
 }
 
 
@@ -141,7 +147,7 @@ code.small {
 
 
 .reversecolor {
-  background-color: #fff;
+  background-color: #eee;
 }
 .reversecolor text {
   color: #181818;
