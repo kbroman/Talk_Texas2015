@@ -58,6 +58,20 @@ d3.json "Data/corr_w_scatter.json", (data) ->
              .attr("stroke-width", 2)
              .on("mouseover", (d) ->
                  d3.select(this).attr("stroke", "black")
+                 corrplot.append("rect").attr("id", "corrtext")
+                         .attr("x", ->
+                             return corXscale(d.col) + 15 if d.col < nvar/2
+                             corXscale(d.col) - 110)
+                         .attr("y", ->
+                             return corYscale(d.row) - 40 if d.row < nvar/2
+                             corYscale(d.row))
+                         .attr("height", 50)
+                         .attr("width", 100)
+                         .attr("fill", "white")
+                         .attr("stroke", "#181818")
+                         .attr("stroke-width", "1")
+                         .attr("opacity", 0.5)
+                         .style("pointer-events", "none")
                  corrplot.append("text").attr("id", "corrtext")
                          .text(d3.format(".2f")(d.value))
                          .attr("x", ->
@@ -90,6 +104,7 @@ d3.json "Data/corr_w_scatter.json", (data) ->
              .on("mouseout", ->
                  d3.selectAll("text.corrlabel").remove()
                  d3.selectAll("text#corrtext").remove()
+                 d3.selectAll("rect#corrtext").remove()
                  d3.select(this).attr("stroke","none"))
              .on("click",(d) -> drawScatter(d.col, d.row))
 
