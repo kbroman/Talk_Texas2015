@@ -6,7 +6,7 @@ Figs: Figs/intercross.png \
 	  Figs/pleiotropy_network.svg \
 	  Figs/causal_network.svg
 
-JS: JS/manyboxplots.js JS/lod_and_effect.js JS/cistrans.js JS/lod_alltimes.js JS/corr_w_scatter.js JS/selection_example.js JS/lod_onetime_random.js JS/handle_stickies.js JS/org_automate.js
+JS: JS/manyboxplots.js JS/lod_and_effect.js JS/cistrans.js JS/lod_alltimes.js JS/corr_w_scatter.js JS/selection_example.js JS/lod_onetime_random.js JS/handle_stickies.js JS/org_automate.js JS/scale_of_results.js
 
 Figs/%.png: R/%.R
 	cd R;R CMD BATCH $(<F)
