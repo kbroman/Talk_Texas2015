@@ -57,8 +57,8 @@ draw_orgchart = function() {
     for (j = k = 2; k <= 3; j = ++k) {
       results.push(svg.selectAll("empty").data([0, 1, 2, 3, 4]).enter().append("rect").attr("x", xs(x[j])).attr("y", function(d) {
         return ys(y[j] + (height[j] + 1) * d);
-      }).attr("width", xs(width[j])).attr("height", ys(height[j])).attr("stroke", bgcolor).attr("stroke-width", 1).attr("fill", colors[j]).attr("opacity", 0).transition().duration(animation_duration / 2).delay(function(d) {
-        return (d + (j - 2) * 5) * animation_duration / 2;
+      }).attr("width", xs(width[j])).attr("height", ys(height[j])).attr("stroke", bgcolor).attr("stroke-width", 1).attr("fill", colors[j]).attr("opacity", 0).transition().duration(animation_duration).delay(function(d) {
+        return (j - 2) * animation_duration;
       }).attr("opacity", 1));
     }
     return results;

@@ -81,8 +81,8 @@ draw_orgchart = () ->
                .attr("fill", colors[j])
                .attr("opacity", 0)
                .transition()
-               .duration(animation_duration/2)
-               .delay((d) -> (d+(j-2)*5)*animation_duration/2)
+               .duration(animation_duration)
+               .delay((d) -> (j-2)*animation_duration)
                .attr("opacity", 1)
 
 draw_orgchart()
