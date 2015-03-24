@@ -9,7 +9,7 @@ g <- pull.geno(fill.geno(f2g[6,], err=0.002, map="c-f"))[,marker]
 
 png("../Figs/multivariate.png", height=600, width=1000, pointsize=24)
 par(mfrow=c(1,2), las=1, pty="s", bg="#181818", col.axis="white",
-    col.lab="white",
+    col.lab="white", cex.axis=0.95,
     mar=c(3.1, 4.1, 1.1, 1.1))
 
 # big separation between groups
