@@ -7,12 +7,12 @@ plot(0,0, xaxt="n", yaxt="n", xlab="", ylab="", type="n",
      xlim=c(-16-2/3, 150), ylim=c(0, 100), xaxs="i", yaxs="i")
 x <- c(25, 75)
 y <- seq(10, 90, len=5)
-text(x[1], y[2], expression(Q[1]))
-text(x[1], y[4], expression(Q[2]))
+text(x[1], y[2], expression(Q[2]))
+text(x[1], y[4], expression(Q[1]))
 
-text(x[2], y[1], expression(Y[1]))
+text(x[2], y[1], expression(Y[3]))
 text(x[2], y[3], expression(Y[2]))
-text(x[2], y[5], expression(Y[3]))
+text(x[2], y[5], expression(Y[1]))
 
 arrowcol <- brocolors("crayons")["Cerulean"]
 xd <- 8
