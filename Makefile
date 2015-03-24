@@ -28,6 +28,7 @@ weball: index.html JS Figs
 	scp CSS/* broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/CSS/
 	scp Figs/*.png broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/Figs/
 	scp Figs/*.jpg broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/Figs/
+	scp Figs/*.svg broman-2.biostat.wisc.edu:public_html/presentations/HTP2015/Figs/
 
 tar: index.html JS Figs
 	cd ..;tar czvhf broman_htp.tgz HTP2015/[A-Za-z]*
