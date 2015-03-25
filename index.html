@@ -26,8 +26,8 @@ high-throughput phenotypes</title>
 
 <section class="titlepage">
 <h3 style="margin-top:-10px;" class="highlight">Opportunities and
-challenges<br>
-in the genetic analysis of<br>
+challenges<br/>
+in the genetic analysis of<br/>
 high-throughput phenotypes</h2>
 
 <h4><a href="http://kbroman.org">Karl Broman</a></h4>
@@ -35,8 +35,8 @@ high-throughput phenotypes</h2>
 &ndash; Madison</p>
 
 <p class="nopadding"><code>
-<a href="http://kbroman.org" class="gray">kbroman.org</a><br>
-<a href="https://github.com/kbroman" class="gray">github.com/kbroman</a><br>
+<a href="http://kbroman.org" class="gray">kbroman.org</a><br/>
+<a href="https://github.com/kbroman" class="gray">github.com/kbroman</a><br/>
 <a href="https://twitter.com/kwbroman" class="gray">@kwbroman</a>
 </code></p>
 
@@ -47,10 +47,10 @@ high-throughput phenotypes</h2>
 <aside>
 These are slides for a talk for the <a
 href="http://www.csiro.au/Portals/Events/Queensland/OCE_Genome-phenome.aspx">Genome
-to Phenotype symposium</a> at CSIRO in Brisbane, Australia, 25 Mar 2015.<br><br>
+to Phenotype symposium</a> at CSIRO in Brisbane, Australia, 25 Mar 2015.<br/><br/>
 
 Click on the link at the top-right to remove these
-notes.<br><br>
+notes.<br/><br/>
 
 These slides were tested for Chrome on a Mac and might look terrible
 in some browsers.
@@ -68,7 +68,7 @@ in some browsers.
 <img style="position:fixed;bottom: 0px; left:0px; z-index: -1;" width="1280px" src="Figs/inbredmice.jpg" />
 
 <aside>
-I focus on genetics problems, and particularly on mouse genetics.<br><br>
+I focus on genetics problems, and particularly on mouse genetics.<br/><br/>
 
 I think these are <a
 href="http://jaxmice.jax.org/strain/000689.html">SWR mice</a>; the
@@ -93,7 +93,7 @@ Threadgill</a>.
 
 <aside>
 Mice are not humans, but you can learn a great deal about human
-biology and disease from mice.<br><br>
+biology and disease from mice.<br/><br/>
 
 The figure on the right is from <a
 href="http://www.daviddeen.com">David Deen</a>.
@@ -114,11 +114,11 @@ href="http://www.daviddeen.com">David Deen</a>.
 I&rsquo;ve focused largely on the analysis of a single phenotype. The
 simplest analysis is to scan the genome, assessing the association
 between genotype and phenotype, considering each position
-individually.<br><br>
+individually.<br/><br/>
 
 I&rsquo;ve focused particularly on multi-locus methods: to identify the set
 of loci that are well supported, including
-epistatic interactions and the possibility of linked QTL.<br><br>
+epistatic interactions and the possibility of linked QTL.<br/><br/>
 
 But in many cases the single-locus scan works remarkably well and is
 hard to beat.
@@ -137,7 +137,7 @@ hard to beat.
 <aside>
 Underneath each of these peaks is an association between genotype and
 phenotype: If you group the mice by genotype at that location, you&rsquo;ll
-see a difference in the average phenotype among the groups.<br><br>
+see a difference in the average phenotype among the groups.<br/><br/>
 
 The BB, BR, and RR indicate the three different genotypes, as these
 data concern a cross between two strains labeled B and R.
@@ -159,12 +159,12 @@ This is a picture of a pile of gene expression arrays. More and more,
 we&rsquo;re seeing genome-scale phenotype information. For example, in
 one of my collaborations, we have data on 500 mice, each with gene
 expression microarrays for 6 different tissues.
-We also have numerous &ldquo;clinical&rdquo; phenotypes.<br><br>
+We also have numerous &ldquo;clinical&rdquo; phenotypes.<br/><br/>
 
 The move is clearly towards deeper and more extensive
 phenotyping: in model organisms (as I study), in humans (particularly
 focusing on electronic medical records), and in plants
-(in the greenhouse or in the field).<br><br>
+(in the greenhouse or in the field).<br/><br/>
 
 Particularly with experimental organisms, the high-dimensional
 phenotypes are often measured in multiple environments, with multiple
@@ -179,27 +179,27 @@ treatments, and over time.
 <div class="center"><h3>Why?</h3></div>
 
 <aside>
-People embark on high-thoughput phenotyping projects for a variety of
-different reasons.<br><br>
+People embark on high-throughput phenotyping projects for a variety of
+different reasons.<br/><br/>
 
 They may just want to learn more things, or work together with others,
 sharing the costs of gathering and genotyping individuals and
 developing a coordinated phenotyping protocol. And one may identify
-important relationships among traits.<br><br>
+important relationships among traits.<br/><br/>
 
 In mouse genetics, we&rsquo;re particularly interested in speeding the
 effort to identify genes underlying complex clinical traits, and to
-improve our understanding of the underlying disease etiology.<br><br>
+improve our understanding of the underlying disease etiology.<br/><br/>
 
 In many cases, the high-throughput phenotyping is a potentially
 less-expensive proxy for the real trait of interest. This is
 particularly the case for electronic medical records (EMRs), which
 often seem more related to medical billing than to medical
-research.<br><br>
+research.<br/><br/>
 
 Or we may just have no idea what to measure (or in what tissue to
 measure it), and so we try everything, just as we measure genotype
-genome-wide rather than at specific candidate genes.<br><br>
+genome-wide rather than at specific candidate genes.<br/><br/>
 
 In agriculture (and to some extent with humans), the primary interest
 may be in prediction the future course of disease, or to get an early
@@ -215,11 +215,11 @@ final yield.)
 
 <aside>
 There is often the feeling that if we measure more things, we&rsquo;ll
-be better off.<br><br>
+be better off.<br/><br/>
 
 But if our high-throughput phenotypes have considerably higher
 measurement variation, we may have a harder time identifying
-genes.<br><br>
+genes.<br/><br/>
 
 I think ideally we want to measure lower-level traits that are closer
 to the genes and have simpler genetic architecture. (That is, are
@@ -256,12 +256,12 @@ This is a correlation matrix for a set of arrays. What the heck is that?
 This is like a set of 487 boxplots of the array data, sorted by their
 median. The black line is at the median. The pink lines are at the
 25th and 75th percentiles. The green, orange, and blue lines are at 10,
-5, and 1 percentiles.<br><br>
+5, and 1 percentiles.<br/><br/>
 
-It turned out that there were a batch of 120 badly-behaved arrays.<br><br>
+It turned out that there were a batch of 120 badly-behaved arrays.<br/><br/>
 
 Things to be concerned about: sample mix-ups, batch effects, bad
-assays.<br><br>
+assays.<br/><br/>
 
 But it&rsquo;s hard to look at the data, given the scale.
 </aside>
@@ -275,7 +275,7 @@ But it&rsquo;s hard to look at the data, given the scale.
 <div class="center"><h4>What the heck is &ldquo;<code class="highlight">FAD_NAD SI 8.3_3.3G</code>&rdquo;?</h4></div>
 
 <aside>
-An actual phenotype name.<br><br>
+An actual phenotype name.<br/><br/>
 
 We need to create data dictionaries with short and long versions of
 names and then proper descriptions. It can be helpful to categorize
@@ -292,16 +292,16 @@ the phenotypes, as well.
 
 <aside>
 The phenotypes (and samples) typically come in batches. Each batch
-will need a bit of curation (e.g., diagnostics).<br><br>
+will need a bit of curation (e.g., diagnostics).<br/><br/>
 
 Our ideas of what analyses to perform generally evolve over the course
 of a project. With a single phenotype, this is pretty easy: you just
-revise your scripts and re-run.<br><br>
+revise your scripts and re-run.<br/><br/>
 
 With <span class="highlight">many</span> batches of <span
 class="highlight">many</span> phenotypes, you may need to go back and
 re-do things. How to keep track of what was done for which
-phenotypes?<br><br>
+phenotypes?<br/><br/>
 
 I suggest having a table that describes, for each phenotype or batch
 of phenotype, what needs to be done. And the results should include
@@ -356,7 +356,7 @@ doing, particularly given the scale of the results.
 
 <aside>
 Many questions about high-throughput phenotypes end up concerning the
-network of relationship among traits and loci.<br><br>
+network of relationship among traits and loci.<br/><br/>
 
 Too often, efforts on this end up with this sort of hairball network
 that doesn&rsquo;t really teach us anything.
@@ -374,7 +374,7 @@ that doesn&rsquo;t really teach us anything.
 
 <aside>
 A common question is whether phenotypes are influenced by a common QTL
-or two closely linked QTL.<br><br>
+or two closely linked QTL.<br/><br/>
 
 You can think of this as concerning the structure of a network.
 </aside>
@@ -390,10 +390,10 @@ You can think of this as concerning the structure of a network.
 <aside>
 We're also interested in whether some low-level trait sits between the
 QTL and the trait, and might actually <span
-class="highlight">be</span> the QTL.<br><br>
+class="highlight">be</span> the QTL.<br/><br/>
 
 Is it a cause or a symptom?
-<br><br>
+<br/><br/>
 
 You can think of this as concerning the structure of a network.
 </aside>
@@ -408,14 +408,14 @@ You can think of this as concerning the structure of a network.
 
 <aside>
 The joint analysis of multiple phenotypes can be revealing of
-underlying QTL effects.<br><br>
+underlying QTL effects.<br/><br/>
 
 These are scatterplots of the expression of two pairs of genes in 500
 intercross mice, with the points colored according to mouse genotype
-at a QTL.<br><br>
+at a QTL.<br/><br/>
 
 (So really bivariate analysis, not multivariate.)
-<br><br>
+<br/><br/>
 
 The plot on the right is particularly interesting: conditional on QTL
 genotype, the expression of the two genes is positively correlated,
@@ -433,7 +433,7 @@ but one is affected positively by the QTL and one negatively.
 <aside>
 This is another pair of genes; blue, green and red are genotypes at a
 QTL, for mice that are <span class="highlight">not recombinant</span>
-across the region. The yellow points are recombinant mice.<br><br>
+across the region. The yellow points are recombinant mice.<br/><br/>
 
 That the recombinant mice show different phenotype pattern than the
 non-recombinants indicates that there are two linked QTL.
@@ -458,13 +458,13 @@ non-recombinants indicates that there are two linked QTL.
 
 <aside>
 This is my favorite example of the construction of composite traits:
-the clustering of tooth surfaces by the co-occurence of dental caries,
+the clustering of tooth surfaces by the co-occurrence of dental caries,
 by <a
 href="http://www.publichealth.pitt.edu/home/directory/john-r-shaffer">John
-Shaffer</a> and colleagues at the University of Pittsburgh.<br><br>
+Shaffer</a> and colleagues at the University of Pittsburgh.<br/><br/>
 
 The different colors correspond to the inferred clusters, determined
-without consideration of spatial positioning.<br><br>
+without consideration of spatial positioning.<br/><br/>
 
 The investigators were not able to identify any susceptibility loci
 when considering individual surfaces, but did when they focused on
@@ -474,6 +474,23 @@ these inferred clusters.
 
 
 
+<section>
+
+<div class="center"><h3>Share more data, sooner.</h3></div>
+
+<aside>
+Having spent a ton of money on phenotyping, and been unable to fully
+explore it, one may be tempted to hold it back for further analysis.<br/><br/>
+
+But I think one should just admit that there is more to be found, and
+that we will take best advantage of our investment in the phenotyping
+by putting multiple data sets together and having many people
+continuing to study valuable data.<br/><br/>
+
+We need to do a better job of giving credit to people who have
+developed and distributed important data sets.
+</aside>
+<p class="pg">20</p></section>
 
 
 <section>
@@ -507,7 +524,7 @@ these inferred clusters.
 <aside>
 To be able to manage and study high-throughput phenotyping, biologists
 and statisticians and others are going to need to improve their
-practices, from visualization to programming.<br><br>
+practices, from visualization to programming.<br/><br/>
 
 Statistics courses often focus on small-scale, nicely-behaved
 data. The curriculum needs to be modernized for our modern needs. <a
@@ -518,11 +535,11 @@ the data science Coursera courses from <a
 href="http://www.bcaffo.com/">Brian Caffo</a>, <a
 href="http://jtleek.com">Jeff Leek</a>, and <a
 href="http://www.biostat.jhsph.edu/~rpeng/">Roger Peng</a>, at Johns
-Hopkins.<br><br>
+Hopkins.<br/><br/>
 
 Even more, we all need to learn to better manage our large data
 projects. <a href="http://datacarpentry.org">Data Carpentry</a> is an
-important effort along these lines.<br><br>
+important effort along these lines.<br/><br/>
 
 And we need to improve not just our programming skills but really our
 software engineering skills: program organization, documentation,
@@ -530,7 +547,7 @@ version control, and testing.  <a
 href="http://software-carpentry.org">Software Carpentry</a> provides
 provides important courses on these topics, for scientists.
 </aside>
-<p class="pg">20</p></section>
+<p class="pg">21</p></section>
 
 
 
@@ -545,18 +562,18 @@ provides important courses on these topics, for scientists.
 <aside>
 A major part of my effort to conquer the high-throughput phenotyping
 problems is to develop interactive data visualization that enable a
-deeper and more rapid exploration of the data and analysis results.<br><br>
+deeper and more rapid exploration of the data and analysis results.<br/><br/>
 
 Heatmaps of things like correlation matrices can be quite useful, but
 they are often hard to read.  It&rsquo;s nice to be able to read off the
-values by hovering.<br><br>
+values by hovering.<br/><br/>
 
 Even better: to be able to click on a pixel and view the corresponding
-scatterplot.<br><br>
+scatterplot.<br/><br/>
 
 This is a set of genes whose expression values are associated with
 genotype at a common locus. In the scatterplot, the points are colored
-by genotype at that locus.<br><br>
+by genotype at that locus.<br/><br/>
 
 With high-dimensional data, data visualizations will necessarily
 involve compressed summaries. But with interactive data
@@ -566,7 +583,7 @@ visualizations, one can have immediate access to the underlying details.
 <p class="codelink">
 <a href="Coffee/corr_w_scatter.coffee">code</a> |
 <a href="Data/corr_w_scatter.json">data</a></p>
-<p class="pg">21</p></section>
+<p class="pg">22</p></section>
 
 
 
@@ -580,14 +597,14 @@ visualizations, one can have immediate access to the underlying details.
 While my efforts towards interactive graphs were motivated by the
 needs for high-dimensional data, I&rsquo;ve come to the conclusion that
 basically all graphs could be improved with at least a bit of
-interactivity. You at least want tooltips.<br><br>
+interactivity. You at least want tooltips.<br/><br/>
 
 We know we should not rely solely on summary statistics (like the LOD
 score), but if it takes an extra step to plot the underlying details,
-we tend not to do it, or at least not so much as we should.<br><br>
+we tend not to do it, or at least not so much as we should.<br/><br/>
 
 The curves at the top are the same LOD curves we saw before. The LOD
-score is a measure of association between genotype and phenotype.<br><br>
+score is a measure of association between genotype and phenotype.<br/><br/>
 
 Click on a chromosome in the top panel to see a detailed view in the
 lower-left panel.  Click on a marker in the lower-left panel to see
@@ -600,7 +617,7 @@ right to get some further information.
 <a href="Data/insulinlod.json">data</a></p>
 
 <script type="text/javascript" src="JS/lod_and_effect.js"></script>
-<p class="pg">22</p></section>
+<p class="pg">23</p></section>
 
 
 
@@ -613,22 +630,22 @@ right to get some further information.
 <aside>
 Here we consider a phenotype measured over time, and perform QTL
 analysis with each time point individually, to seek genetic loci that
-affect the response.<br><br>
+affect the response.<br/><br/>
 
 It&rsquo;s a lot of work to make sense of these results without an
-interactive graph.<br><br>
+interactive graph.<br/><br/>
 
 The top-left plot is a &ldquo;heat map&rdquo; of the LOD scores
 for each time point at each genomic position.  LOD scores are also
 colored to indicate the sign of the QTL effect, with red indicating
 that BB lines have larger phenotype values and blue indicating that AA lines
 have larger phenotype values.  We consider only those (position, time)
-pairs with LOD > 1.<br><br>
+pairs with LOD > 1.<br/><br/>
 
 When you hover over a point in the top-left plot, the LOD curves for the
 corresponding time are shown below, and the phenotype averages and
 estimated QTL effect (across time) for the corresponding genomic
-position are shown to the right.<br><br>
+position are shown to the right.<br/><br/>
 
 Click on a point to show pointwise confidence bands on the QTL
 effect (&plusmn; 2 SE).  (We require a mouse click, as otherwise the graph
@@ -650,7 +667,7 @@ was painfully slow to refresh.)
 <a href="Coffee/corr_w_scatter.coffee">code</a> |
 <a href="Data/corr_w_scatter.json">data</a></p>
 -->
-<p class="pg">23</p></section>
+<p class="pg">24</p></section>
 
 
 
@@ -667,23 +684,23 @@ was painfully slow to refresh.)
 <script type="text/javascript" src="JS/lod_onetime_random.js"></script>
 
 <aside>
-Interactive graphs are incredibly valuable educational tools.<br><br>
+Interactive graphs are incredibly valuable educational tools.<br/><br/>
 
 You can only show so many static graphs, and it can be a big step to get
-students to make more, on their own.<br><br>
+students to make more, on their own.<br/><br/>
 
-Interactive graphs can be a big help to build students&rsquo; intution
+Interactive graphs can be a big help to build students&rsquo; intuition
 and understanding, both as a demonstration, and as a tool that they
-can play with.<br><br>
+can play with.<br/><br/>
 
 This is an illustration of permutation test: Click the green button to shuffle
-the phenotypes and re-draw the LOD curves.<br><br>
+the phenotypes and re-draw the LOD curves.<br/><br/>
 
 There&rsquo;s a hidden &ldquo;back&rdquo; button a bit to the right of
 the green button.
 </aside>
 
-<p class="pg">24</p></section>
+<p class="pg">25</p></section>
 
 
 
@@ -698,19 +715,19 @@ Here&rsquo;s my most fancy plot. But when I showed this to my
 collaborator, his first question was, &ldquo;Where&rsquo;s my favorite
 gene?&rdquo; I needed to add a search box. <em>Moral</em>: These tools
 are not just for playing around; they need to address the scientific
-questions.<br><br>
+questions.<br/><br/>
 
 The top-left image shows inferred eQTL (sites in genome where genotype
 is associated with the expression of some gene).  The y-axis
 corresponds to the genomic location of probes on a gene expression
 array.  The x-axis corresponds to marker positions.  Dots indicate
 that the genotypes at a particular marker are associated with the
-expression of a particular probe.<br><br>
+expression of a particular probe.<br/><br/>
 
 Hover over a point in the top-right to see all eQTL for a given probe.
 Click on a point to see the LOD curves across the genome for that
 probe: the association between that probe&rsquo;s expression and genotype at
-each position in the genome.<br><br>
+each position in the genome.<br/><br/>
 
 Click on a marker in the lower LOD curve plot to see the corresponding
 phenotype-vs-genotype plot in the top-right.
@@ -720,7 +737,7 @@ phenotype-vs-genotype plot in the top-right.
 <a href="Coffee/cistrans.coffee">code</a></p>
 
 <script type="text/javascript" src="JS/cistrans.js"></script>
-<p class="pg">25</p></section>
+<p class="pg">26</p></section>
 
 
 
@@ -743,20 +760,20 @@ phenotype-vs-genotype plot in the top-right.
 <aside>
 I&rsquo;m using <a href="http://d3js.org">D3</a>, a javascript
 library for data visualization.  (D3 stands for &ldquo;data-driven
-documents.&rdquo;)<br><br>
+documents.&rdquo;)<br/><br/>
 
 This is one of the images that convinced me that I wanted to learn D3.
 There are lots of additional examples at the <a
 href="https://github.com/mbostock/d3/wiki/Gallery">D3
-gallery</a>.<br><br>
+gallery</a>.<br/><br/>
 
 There&rsquo;s a ton to learn, and it&rsquo;s rather forbidding (and much of it is
-dull).<br><br>
+dull).<br/><br/>
 
 My most common mistake is to forget to include <code>.enter()</code>.
 No error is given, but nothing shows up in the plot.
 </aside>
-<p class="pg">26</p></section>
+<p class="pg">27</p></section>
 <script type="text/javascript" src="JS/collision.js"></script>
 
 
@@ -785,14 +802,14 @@ No error is given, but nothing shows up in the plot.
 
 <aside>
 I want to be able to generate interactive graphs rapidly: for
-my own exploratory data analysis, and for my many collaborators.<br><br>
+my own exploratory data analysis, and for my many collaborators.<br/><br/>
 
 My tendency is to write a script with a bunch of code for a specific chart
-with specific data.  I need to fight that and write reusable functions.<br><br>
+with specific data.  I need to fight that and write reusable functions.<br/><br/>
 
 And I need a system for generating interactive charts, so that others
 (including myself a few months from now) can make use of what I&rsquo;ve
-built.<br><br>
+built.<br/><br/>
 
 I&rsquo;m writing an R package, <a
 href="http://kbroman.org/qtlcharts">R/qtlcharts</a> for
@@ -803,11 +820,55 @@ format, and links to the javascript code) to a file and then opens it
 in a browser. For small-to-medium-scale charts, this is fast and
 effective.
 </aside>
-<p class="pg">27</p></section>
+<p class="pg">28</p></section>
 
 
 
 
+<section>
+<h3 style="margin-top:10px">Summary</h3>
+
+<ul class="tight" style="margin-top:-10px">
+
+  <li>Challenges</li>
+
+      <ul class="lowlight">
+        <li>Organizing analyses</li>
+        <li>Making sense of the enormous pile of results</li>
+        <li>Inferring networks; breaking down to small networks</li>
+        <li>Joint consideration of multiple traits; form composite traits</li>
+      </ul>
+
+  <li>Share more data, sooner</li>
+
+  <li>Needed upgrades in training</li>
+
+      <ul class="lowlight">
+        <li>Data analysis and visualization</li>
+        <li>Data management</li>
+        <li>Software engineering</li>
+      </ul>
+
+  <li><span class="highlight">Interactive</span> graphics
+  require effort, but they</li>
+
+      <ul class="lowlight">
+        <li>Facilitate exploration</li>
+        <li>Are great collaborative tools</li>
+        <li>Enable summaries with access to the details</li>
+        <li>Are great for teaching</li>
+        <li>Need to be <span class="highlight">tailored</span> to the data and questions</li>
+       </ul>
+
+  <li><a href="http://kbroman.org/qtlcharts" class="highlight">R/qtlcharts</a>,
+        <a class="gray" href="http://www.ncbi.nlm.nih.gov/pubmed/25527287">Broman (2015) Genetics 199:359&ndash;361</a></li>
+
+</ul>
+
+<aside>
+It&rsquo;s always good to have a summary slide with your key points.
+</aside>
+<p class="pg">29</p></section>
 
 
 
@@ -820,7 +881,7 @@ effective.
 
 <table cellspacing=25>
   <tr valign="top">
-     <td class="lowlight">Alan Attie<br>Mark Keller</td>
+     <td class="lowlight">Alan Attie<br/>Mark Keller</td>
      <td width=10></td>
      <td>Biochemistry, UW&ndash;Madison</td>
      </tr>
@@ -832,7 +893,7 @@ effective.
      </tr>
 
   <tr valign="top">
-     <td class="lowlight">Christina Kendziorski<br>Aimee Teo Broman</td>
+     <td class="lowlight">Christina Kendziorski<br/>Aimee Teo Broman</td>
      <td></td>
      <td>Biostatistics & Medical Informatics, UW&ndash;Madison</td>
      </tr>
@@ -844,7 +905,7 @@ effective.
      </tr>
 
   <tr valign="top">
-     <td class="lowlight">Danielle Greenawalt<br>Amit Kulkarni</td>
+     <td class="lowlight">Danielle Greenawalt<br/>Amit Kulkarni</td>
      <td></td>
      <td>Merck & Co., Inc.</td>
      </tr>
@@ -859,7 +920,7 @@ effective.
   <tr height=25><td></td></tr>
 
   <tr valign="top">
-     <td class="lowlight">Edgar Spalding<br>Candace Moore<br>Logan Johnson</td>
+     <td class="lowlight">Edgar Spalding<br/>Candace Moore<br/>Logan Johnson</td>
      <td></td>
      <td>Botany, UW-Madison</td>
      </tr>
@@ -869,7 +930,7 @@ effective.
 <aside>
 Many people are involved in the studies that I presented.
 </aside>
-<p class="pg">28</p></section>
+<p class="pg">30</p></section>
 
 
 
@@ -879,11 +940,11 @@ Many people are involved in the studies that I presented.
 &nbsp; <img style="vertical-align:middle;" width="150px" src="Figs/cc-zero.png" /></p>
 
 <p class="large"><code>
-<a href="http://kbroman.org" class="gray">kbroman.org</a><br>
+<a href="http://kbroman.org" class="gray">kbroman.org</a><br/>
 </code></p>
 
 <p class="large"><code>
-<a href="https://github.com/kbroman" class="gray">github.com/kbroman</a><br>
+<a href="https://github.com/kbroman" class="gray">github.com/kbroman</a><br/>
 </code></p>
 
 <p class="large"><code>
@@ -897,11 +958,11 @@ Many people are involved in the studies that I presented.
 </div>
 
 <aside>
-This is where to find me.<br><br>
+This is where to find me.<br/><br/>
 
 In particular, you can find all of my papers, talks, and software.
 </aside>
-<p class="pg">29</p></section>
+<p class="pg">31</p></section>
 
 
 
