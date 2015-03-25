@@ -1,6 +1,6 @@
 ### Talk on &ldquo;Opportunities and challenges in the genetic analysis of high-throughput phenotypes&rdquo;
 
-These are slides for a talk that I will give at the
+These are slides for a talk that I gave at the
 [Genome to phenome](http://www.csiro.au/Portals/Events/Queensland/OCE_Genome-phenome.aspx)
 symposium at CSIRO in Brisbane, Australia, 25 Mar 2015.
 
