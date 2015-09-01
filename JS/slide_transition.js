@@ -6,7 +6,7 @@ slide_transition = function(slidenumber) {
   if(slidenumber == current_slide) return;
   current_slide = slidenumber;
 
-  if(slidenumber==28) {
+  if(slidenumber==29) {
     d3.select("p#dotenter").transition()
                            .style("opacity", 1)
                            .delay(20000)
