@@ -1,6 +1,6 @@
 ### Talk on &ldquo;The genetic analysis of high-throughput phenotypes&rdquo;
 
-These are slides for a talk that I will give at Texas A&amp;M on 1 Sep 2015.
+These are slides for a talk that I gave at Texas A&amp;M on 1 Sep 2015.
 
 See them in action [here](https://www.biostat.wisc.edu/~kbroman/presentations/Texas2015).
 
